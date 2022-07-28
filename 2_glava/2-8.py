@@ -1,5 +1,6 @@
 # Деревья решений
-# Классификация на наборе данных Breast Cancer
+# Важность признаков в деревьях
+# Классификация на наборе данных "Breast Cancer"
 from sklearn.model_selection import train_test_split
 import mglearn
 import matplotlib.pyplot as plt
@@ -38,9 +39,7 @@ def plot_feature_importances_cancer(model):
     plt.xlabel("Важность признака")
     plt.ylabel("Признак")
     plt.show()
-
-
-# plot_feature_importances_cancer(model_tree)
+plot_feature_importances_cancer(model_tree)
 
 
 # Взаимосвять глубины дерева и правильности предсказания
@@ -56,4 +55,4 @@ plt.semilogx(range(1, 7), ls_test, label='Тестовые данные')
 plt.xlabel("Глубина")
 plt.ylabel("Правильность")
 plt.legend()
-plt.show()
+# plt.show()

@@ -14,18 +14,16 @@ import mglearn
 
 
 # X.shape=(26, 2),  y.shape=(26,)
-from mglearn import discrete_scatter
-
 X, y = make_forge()
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 
 # Исследование данных через их визуализацию
-discrete_scatter(X[:, 0], X[:, 1], y)
+mglearn.discrete_scatter(X[:, 0], X[:, 1], y)
 # plt.show()
 
 model_lg = LogisticRegression(max_iter=100_000, C=1).fit(X_train, y_train)
 print(f'Предсказание (LogisticRegression): {model_lg.predict(X_test)}')
-print(f'Оценка результата обучения (LogisticRegression): {model_lg.score(X_test, y_test)}')
+print(f'Оценка результата обучения (LogisticRegression): {model_lg.score(X_train, y_test)}')
 print(f'Оценка результата предсказания (LogisticRegression): {model_lg.score(X_test, y_test)}')
 
 
