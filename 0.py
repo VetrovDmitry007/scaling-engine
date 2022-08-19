@@ -7,7 +7,7 @@ arr = np.array([[1,2,3],[4,5,6],[7,8,9]])
 print(f'{arr=}')
 
 eye = np.eye(4)
-print(eye)
+print(f'{eye=}')
 
 # Преобразование массива в разряженную (сжатую) матрицу Scipy в формате CSR (сжатым хранением строкой)
 csr_matrix = sparse.csr_matrix(eye)

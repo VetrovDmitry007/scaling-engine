@@ -28,7 +28,7 @@ for encod in encoding_list:
 
 data = pd.read_csv('./data_dummies.csv', index_col=None, header=None, encoding = 'cp1251',
                    sep=';', names=['age', 'pol', 'fin', 'spec'])
-# print(data.head())
+print(data.head())
 
 print('\nСоздание описательной статистики describe():')
 print(data.describe())

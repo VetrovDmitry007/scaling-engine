@@ -35,7 +35,7 @@ sklearn.metrics.roc_curve --
 Функция вычисляет рабочии харектеристики ROC-кривой
 fpr, tpr, thresholds = roc_curve(y_test, svc.decision_function(X_test))
 
-roc_auc_score --
+sklearn.metrics.roc_auc_score --
 Функция вычисляет AUC -- площадь под ROC-кривой.
 Примечание: эту реализацию можно использовать с бинарной, многоклассовой и многоуровневой классификацией,
 но применяются некоторые ограничения.
@@ -59,3 +59,8 @@ sklearn.metrics.accuracy_score --
 >> y_true = [0, 1, 2, 3]
 >> accuracy_score(y_true, y_pred)
 >> 0.5
+
+Стандартное отклонение
+df_diabetes = pd.DataFrame(X, columns=ds_diabetes.feature_names)
+df_diabetes.std(axis=1) -- по Y (по столбцу)
+df_diabetes.std(axis=0) -- по X (по строке)
